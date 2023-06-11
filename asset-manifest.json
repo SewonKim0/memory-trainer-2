@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/memory-trainer-2/static/css/main.31d6cfe0.css",
+    "main.js": "/memory-trainer-2/static/js/main.ed67d778.js",
+    "static/js/787.5d5ef50d.chunk.js": "/memory-trainer-2/static/js/787.5d5ef50d.chunk.js",
+    "index.html": "/memory-trainer-2/index.html",
+    "main.ed67d778.js.map": "/memory-trainer-2/static/js/main.ed67d778.js.map",
+    "787.5d5ef50d.chunk.js.map": "/memory-trainer-2/static/js/787.5d5ef50d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.ed67d778.js"
+  ]
+}
