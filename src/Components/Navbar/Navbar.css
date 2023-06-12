@@ -1,0 +1,123 @@
+/* Navbar: Container */
+div#navbar {
+    width: 100%;
+    background-color: var(--color1);
+    height: 3rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Navbar: Back Button */
+div#navbar > a#back {
+    width: 4.5rem;
+    height: 2.1rem;
+    color: black;
+    background-color: var(--color2);
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Animation: Border Fade In */
+    transition-property: border-color;
+    transition-duration: 0.3s;
+}
+div#navbar > a#back:hover {
+    /* Animation: Border Fade In */
+    border-color: white;
+}
+div#navbar > a#back:active {
+    background-color: rgb(230, 230, 230);
+}
+
+/* Navbar: Delete Section Button */
+div#navbar > button#delete-section {
+    width: 8.5rem;
+    height: 2.1rem;
+    color: black;
+    background-color: var(--color2);
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Animation: Border Fade In */
+    transition-property: border-color;
+    transition-duration: 0.3s;
+}
+div#navbar > button#delete-section:hover {
+    /* Animation: Border Fade In */
+    border-color: white;
+}
+div#navbar > button#delete-section:active {
+    background-color: rgb(230, 230, 230);
+}
+/* Navbar Delete Section Button Dropdown Mode */
+div#navbar > button#delete-section.dropdown {
+    height: unset;
+}
+
+/* Navbar: Hide Values Button */
+div#navbar > button#hide-values {
+    width: 7.5rem;
+    height: 2.1rem;
+    color: black;
+    background-color: var(--color2);
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Animation: Border Fade In */
+    transition-property: border-color;
+    transition-duration: 0.3s;
+}
+div#navbar > button#hide-values:hover {
+    /* Animation: Border Fade In */
+    border-color: white;
+}
+div#navbar > button#hide-values:active {
+    background-color: rgb(230, 230, 230);
+}
+
+/* Navbar: Light/Dark Button */
+div#navbar > button#light-dark {
+    width: 2.1rem;
+    height: 2.1rem;
+    color: black;
+    background-color: var(--color2);
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Animation: Border Fade In */
+    transition-property: border-color;
+    transition-duration: 0.3s;
+}
+div#navbar > button#light-dark:hover {
+    /* Animation: Border Fade In */
+    border-color: white;
+}
+div#navbar > button#light-dark:active {
+    background-color: rgb(230, 230, 230);
+}
