@@ -2,7 +2,7 @@ import "./Navbar.css";
 import { useState } from "react";
 import { BiAdjust } from "react-icons/bi";
 
-export default function Navbar({ sections }) {
+export default function Navbar({ sections, deleteSection }) {
     //state: whether to show delete dropdown menu
     const [deleteDropdownShow, setDeleteDropdownShow] = useState(false);
 
@@ -19,7 +19,7 @@ export default function Navbar({ sections }) {
         <button
             id="delete-section"
             //set class based on deleteDropdownShow
-            class={!deleteDropdownShow ? "" : "dropdown"}
+            className={!deleteDropdownShow ? "" : "dropdown"}
             onClick={() => {
                 //toggle dropdown
                 setDeleteDropdownShow(!deleteDropdownShow);
@@ -30,18 +30,22 @@ export default function Navbar({ sections }) {
 
             {/* Dropdown Menu: Render if deleteDropDownShow */}
             {!deleteDropdownShow ? null :
-            //List of sessions to delete
-            sections.sectionList.map((section) => {
+            //if no sections: display no sections msg
+            sections.sectionList.length === 0 ? <p> No Sections </p> :
+            //List of sections to delete
+            Object.entries(sections.sectionList).map(([sectionId, section]) => {
                 //unpack section
-                let {sectionName, sectionId} = section;
+                let {sectionName} = section;
 
-                return <button
+                return <div
+                    key={sectionId}
                     onClick={() => {
                         //delete section by id
+                        deleteSection(sectionId);
                     }}
                 >
                     <p> {sectionName} </p>
-                </button>;
+                </div>;
             })}
         </button>
 

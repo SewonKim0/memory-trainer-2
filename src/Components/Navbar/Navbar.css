@@ -63,9 +63,29 @@ div#navbar > button#delete-section:hover {
 div#navbar > button#delete-section:active {
     background-color: rgb(230, 230, 230);
 }
-/* Navbar Delete Section Button Dropdown Mode */
+
+/* Navbar: Delete Section Button Dropdown Mode */
 div#navbar > button#delete-section.dropdown {
     height: unset;
+
+    transform: translateY(calc(50% - 1.05rem));
+    padding-bottom: 0.3rem;
+}
+/* Navbar: Dropdown Mode Button Text */
+div#navbar > button#delete-section.dropdown > h3 {
+    margin: 0.5rem;
+}
+/* Navbar: Dropdown Entries */
+div#navbar > button#delete-section.dropdown > div {
+    background-color: transparent;
+    width: 100%;
+    border: none;
+}
+div#navbar > button#delete-section.dropdown > div:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+div#navbar > button#delete-section.dropdown > div > p {
+    margin: 0.2em;
 }
 
 /* Navbar: Hide Values Button */
