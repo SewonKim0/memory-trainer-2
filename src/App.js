@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect } from "react";
 import Navbar from "./Components/Navbar/Navbar";
+import Sections from "./Components/Sections/Sections";
 
 function App() {
   //state: sections
@@ -17,44 +18,25 @@ function App() {
       "sectionList": {
         "0": {
           "sectionName": "Section 0",
-          "entryList": {},
-          "nextEntryId": 0
+          "entryList": [0, 1],
+          "nextEntryId": 2
         },
 
         "1": {
           "sectionName": "Section 1",
-          "entryList": {},
+          "entryList": [],
           "nextEntryId": 0
         },
 
         "2": {
           "sectionName": "Section 2",
-          "entryList": {},
+          "entryList": [],
           "nextEntryId": 0
         }
       },
       "nextSectionId": 3,
       "hideValues": false
     });
-
-    //CASE 2
-    // setSections({
-    //   "sectionList": {
-    //     "0": {
-    //       "sectionName": "Section 0 Eeeeeeeeeeeeeeeeeeee",
-    //       "entryList": {},
-    //       "nextEntryId": 0
-    //     },
-
-    //     "1": {
-    //       "sectionName": "Section 1 32wewe fwefwe fwe fewf we fwef wef ",
-    //       "entryList": {},
-    //       "nextEntryId": 0
-    //     }
-    //   },
-    //   "nextSectionId": 2,
-    //   "hideValues": false
-    // });
   }, [])
 
   return <div id="app">
@@ -68,6 +50,11 @@ function App() {
           return prevSections;
         });
       }}  
+    />
+
+    {/* Sections */}
+    <Sections
+      sections={sections}
     />
   </div>
 }
